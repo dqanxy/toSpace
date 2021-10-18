@@ -1,0 +1,1 @@
+global.david.image_xscale = -1;

@@ -1,0 +1,1 @@
+global.david.hSpeed+=.1;

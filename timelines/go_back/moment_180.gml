@@ -1,0 +1,1 @@
+global.james.hSpeed=1;

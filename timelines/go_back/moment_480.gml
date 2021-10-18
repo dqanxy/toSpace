@@ -1,0 +1,1 @@
+global.james.image_xscale = -1;

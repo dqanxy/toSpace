@@ -1,0 +1,1 @@
+global.bs.image_alpha-=.01;

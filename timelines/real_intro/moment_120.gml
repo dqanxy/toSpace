@@ -1,0 +1,2 @@
+
+	scr_play(rain);

@@ -85,6 +85,17 @@ else if(state==1){
 	
 }
 var orgscale = image_xscale;
+
+if(instance_exists(obj_superior_boss)&&global.boss.fix){
+	if(x+hSpeed>global.cx+480){
+		hSpeed = 0;
+		x=global.cx+480;
+	}
+	else if(x+hSpeed<global.cx){
+		hSpeed = 0;
+		x=global.cx+20;
+	}
+}
 scr_collision_movement();
 if(state==1){
 	onground=true;
@@ -110,13 +121,17 @@ if(room==room_second){
 }
 scr_camera();
 if(state!=2&&!(instance_exists(obj_superior_boss)&&global.boss.fix)){
-if(global.cy<ground-167){
-	camera_set_view_pos(global.CAMERA,max(0,camx),global.cy+2);
-}
-else if(global.cy>ground-165){
-	camera_set_view_pos(global.CAMERA,max(0,camx),global.cy-2);
+	if(global.cy<ground-167){
+		camera_set_view_pos(global.CAMERA,max(0,camx),global.cy+2);
+	}
+	else if(global.cy>ground-165){
+		camera_set_view_pos(global.CAMERA,max(0,camx),global.cy-2);
+	}
+	else{
+		camera_set_view_pos(global.CAMERA,max(0,camx),global.cy);
+	}
 }
 else{
-	camera_set_view_pos(global.CAMERA,max(0,camx),global.cy);
-}
+	camera_set_view_pos(global.CAMERA,4000,800);// TODO
+	
 }

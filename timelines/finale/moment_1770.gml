@@ -1,0 +1,1 @@
+global.credits_text1.death = true;

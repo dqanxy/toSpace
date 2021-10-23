@@ -26,7 +26,7 @@ if(instance_exists(obj_james)){
 	var issit = global.james.state==2;
 instance_destroy(global.james);
 global.james = instance_create_layer(rp.jx,rp.jy,"Instances",obj_james);
-if(issit){
+if(issit||rp.sit){
 	global.james.state = 2;	
 }
 }

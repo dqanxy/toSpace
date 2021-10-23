@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(instance_exists(obj_main_text)){
 	
-	if(global.main_text.done&&global.pspace&&!global.main_text.death){
+	if(global.main_text.done&&global.pspace&&!global.main_text.death&&global.run==0){
 		global.main_text.death = true;
 		global.m_cutscene.timeline_index = intro;
 		global.m_cutscene.timeline_position = 0;

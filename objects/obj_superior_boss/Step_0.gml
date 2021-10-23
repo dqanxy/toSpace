@@ -27,7 +27,8 @@ if(letsfight){
 		}
 		else{
 			if(image_index>=4&&timerlazer>=-1000){
-				instance_create_layer(x+450,y+40,"Instances",obj_superior_lazer);
+				var lazer = instance_create_layer(x+408,y+76,"Instances",obj_superior_lazer);
+				lazer.depth = depth+1;
 				timerlazer = -1100;
 			}
 			if(image_index>=image_number-1){
@@ -55,8 +56,8 @@ if(letsfight){
 			image_index = 0;
 		}
 		else{
-			if(image_index>=4&&timerspawn>=-1000){
-				instance_create_layer(x+450,y+40,"Instances",obj_superior_strong);
+			if(image_index>=3.5&&timerspawn>=-1000){
+				instance_create_layer(x+343,y+34,"Instances",obj_superior_strong);
 				timerspawn = -1100;
 			}
 			if(image_index>=image_number-1){
@@ -76,7 +77,7 @@ if(letsfight){
 			if(image_index>=image_number-1){
 				
 				timerwave = irandom_range(2000,2500);
-				instance_create_layer(x+450,y+40,"Instances",obj_superior_wave);
+				instance_create_layer(x+10,y+149,"Instances",obj_superior_wave);
 				frame.sprite_index = spr_frame;
 				onewave = false;
 			}

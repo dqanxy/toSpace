@@ -6,4 +6,5 @@ for(i=0; i<30;i++){
 	part.hSpeed = random_range(-3,3);
 	part.vSpeed=random_range(-3,3);
 	part.scale = random_range(.6,.8);
+	part.depth = global.james.depth-1;
 }
